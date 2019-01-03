@@ -6,9 +6,6 @@ export default {
   effects: {},
   reducers: {
     updateState(state, { payload }) {
-      console.log(payload);
-      const o = { ...state, ...payload };
-      console.log(o);
       return { ...state, ...payload };
     }
   },

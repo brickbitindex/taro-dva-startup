@@ -10,12 +10,8 @@ import './index.scss'
 }))
 class Index extends Component {
 
-    config = {
+  config = {
     navigationBarTitleText: '首页'
-  }
-
-  componentWillReceiveProps (nextProps) {
-    console.log(this.props, nextProps)
   }
 
   componentWillUnmount () { }
@@ -25,7 +21,7 @@ class Index extends Component {
   componentDidHide () { }
 
   add() {
-    let count = this.props.count;
+    const count = this.props.count;
     this.props.dispatch({
       type: 'counter/updateState',
       payload: {
@@ -46,7 +42,6 @@ class Index extends Component {
   }
 
   render () {
-    console.log(this.props.count);
     return (
       <View className='index'>
         <Button className='add_btn' onClick={this.add}>+</Button>
