@@ -3,7 +3,16 @@ export default {
   state: {
     count: 0,
   },
-  effects: {},
+  effects: {
+    * desCount({ payload }, { call, put }) {
+      yield put({
+        type: 'updateState',
+        payload: {
+          count: payload.count,
+        },
+      });
+    },
+  },
   reducers: {
     updateState(state, { payload }) {
       return { ...state, ...payload };
