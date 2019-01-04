@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 import '@tarojs/async-await'
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
 
 import dva from './dva'
 import models from './models'
-=======
-import Taro, { Component } from '@tarojs/taro'
->>>>>>> 11140d43adb2185f9fc2682cd10fd6904d30e37a
 import Index from './pages/index'
 
 import './app.scss'
@@ -17,14 +13,11 @@ import './app.scss'
 // if (process.env.NODE_ENV !== 'production' && process.env.TARO_ENV === 'h5')  {
 //   require('nerv-devtools')
 // }
-<<<<<<< HEAD
 const dvaApp = dva.createApp({
   initialState: {},
   models,
 });
 const store = dvaApp.getStore();
-=======
->>>>>>> 11140d43adb2185f9fc2682cd10fd6904d30e37a
 
 class App extends Component {
 
@@ -46,24 +39,17 @@ class App extends Component {
 
   componentDidHide () {}
 
-<<<<<<< HEAD
   componentCatchError () {}
 
-=======
->>>>>>> 11140d43adb2185f9fc2682cd10fd6904d30e37a
   componentDidCatchError () {}
 
   // 在 App 类中的 render() 函数没有实际作用
   // 请勿修改此函数
   render () {
     return (
-<<<<<<< HEAD
       <Provider store={store}>
         <Index />
       </Provider>
-=======
-      <Index />
->>>>>>> 11140d43adb2185f9fc2682cd10fd6904d30e37a
     )
   }
 }

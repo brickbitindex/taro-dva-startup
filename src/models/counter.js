@@ -1,11 +1,13 @@
+// import fetch from '../utils/fetch';
+
 export default {
   namespace: 'counter',
   state: {
     count: 0,
   },
   effects: {
-    * desCount({ payload }, { call, put }) {
-      yield put({
+    async desCount({ payload }, { put }) {
+      await put({
         type: 'updateState',
         payload: {
           count: payload.count,
